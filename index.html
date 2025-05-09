@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For The Most Amazing Girl</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .dancing-font {
+            font-family: 'Dancing Script', cursive;
+        }
+        .poppins-font {
+            font-family: 'Poppins', sans-serif;
+        }
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+            animation: heartbeat 1.5s infinite;
+        }
+        .heart:before, .heart:after {
+            position: absolute;
+            content: "";
+            left: 50px;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            background: #ff6b6b;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        .heart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .floating { 
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translate(0,  0px); }
+            50%  { transform: translate(0, 15px); }
+            100%   { transform: translate(0, -0px); }   
+        }
+        .message-box {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,245,245,0.9) 100%);
+            backdrop-filter: blur(5px);
+        }
+        .kiss-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 192, 203, 0.7);
+            z-index: 100;
+            animation: fadeOut 2s forwards;
+            animation-delay: 1.5s;
+            pointer-events: none;
+        }
+        @keyframes fadeOut {
+            to { opacity: 0; }
+        }
+        .lip-print {
+            font-size: 80px;
+            animation: kissScale 1.5s ease-out;
+            color: #ff1493;
+        }
+        @keyframes kissScale {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.5); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .hug-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 228, 225, 0.8);
+            z-index: 100;
+            animation: fadeOut 2s forwards;
+            animation-delay: 2s;
+            pointer-events: none;
+        }
+        .hug-message {
+            font-size: 2rem;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+            animation: fadeIn 1s;
+        }
+        .hearts-container {
+            display: flex;
+            animation: heartsFloat 2s ease-in-out;
+        }
+        .heart-emoji {
+            font-size: 40px;
+            margin: 0 10px;
+            animation: heartBeat 1s infinite alternate;
+        }
+        @keyframes heartsFloat {
+            0% { transform: translateY(0); opacity: 0; }
+            50% { transform: translateY(-20px); opacity: 1; }
+            100% { transform: translateY(-40px); opacity: 0; }
+        }
+        @keyframes heartBeat {
+            to { transform: scale(1.3); }
+        }
+    </style>
+</head>
+<body class="bg-pink-50 poppins-font min-h-screen flex flex-col items-center justify-center p-4">
+    <!-- Floating Hearts Background -->
+    <div class="fixed inset-0 overflow-hidden z-0">
+        <div class="absolute top-10 left-1/4 text-pink-200 text-4xl opacity-60 floating" style="animation-delay: 0s;">❤</div>
+        <div class="absolute top-1/3 left-3/4 text-pink-200 text-5xl opacity-60 floating" style="animation-delay: 0.5s;">❤</div>
+        <div class="absolute top-2/3 left-1/5 text-pink-200 text-6xl opacity-60 floating" style="animation-delay: 1s;">❤</div>
+        <div class="absolute bottom-20 left-2/3 text-pink-200 text-3xl opacity-60 floating" style="animation-delay: 1.5s;">❤</div>
+    </div>
+
+    <div class="relative z-10 w-full max-w-4xl">
+        <!-- Header with animated heart -->
+        <header class="flex flex-col items-center justify-center mb-8">
+            <div class="heart mb-4"></div>
+            <h1 class="dancing-font text-5xl md:text-6xl font-bold text-pink-600 mb-2 text-center animate__animated animate__fadeIn">For My Beautiful Girl</h1>
+            <p class="text-pink-500 text-lg animate__animated animate__fadeIn animate__delay-1s">Every moment with you feels like a dream...</p>
+        </header>
+
+        <!-- Main content with love messages -->
+        <main class="space-y-6">
+            <!-- Message 1 -->
+            <div class="message-box rounded-xl p-6 shadow-lg transform transition-all duration-500 hover:scale-105 animate__animated animate__fadeInUp">
+                <h2 class="dancing-font text-3xl text-pink-700 mb-3">When I See You...</h2>
+                <p class="text-gray-700 text-lg">My heart skips a beat every time you smile. Your laughter is my favorite sound, and your eyes hold galaxies I could get lost in forever.</p>
+            </div>
+
+            <!-- Message 2 -->
+            <div class="message-box rounded-xl p-6 shadow-lg transform transition-all duration-500 hover:scale-105 animate__animated animate__fadeInUp animate__delay-1s">
+                <h2 class="dancing-font text-3xl text-pink-700 mb-3">You Make Me...</h2>
+                <p class="text-gray-700 text-lg">The luckiest person alive just by being you. Your kindness, intelligence, and beauty leave me in awe every single day.</p>
+            </div>
+
+            <!-- Message 3 -->
+            <div class="message-box rounded-xl p-6 shadow-lg transform transition-all duration-500 hover:scale-105 animate__animated animate__fadeInUp animate__delay-2s">
+                <h2 class="dancing-font text-3xl text-pink-700 mb-3">I Promise...</h2>
+                <p class="text-gray-700 text-lg">To cherish you, support you, and love you more with each passing day. You're my today and all of my tomorrows.</p>
+            </div>
+
+            <!-- Photo gallery placeholder -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 animate__animated animate__fadeIn animate__delay-3s">
+                <div class="bg-pink-200 rounded-lg h-32 md:h-48 flex items-center justify-center overflow-hidden transform transition-all duration-300 hover:scale-110">
+                    <span class="text-pink-600">Our Memories</span>
+                </div>
+                <div class="bg-pink-300 rounded-lg h-32 md:h-48 flex items-center justify-center overflow-hidden transform transition-all duration-300 hover:scale-110">
+                    <span class="text-pink-700">Will Go Here</span>
+                </div>
+                <div class="bg-pink-400 rounded-lg h-32 md:h-48 flex items-center justify-center overflow-hidden transform transition-all duration-300 hover:scale-110">
+                    <span class="text-white">❤</span>
+                </div>
+                <div class="bg-pink-500 rounded-lg h-32 md:h-48 flex items-center justify-center overflow-hidden transform transition-all duration-300 hover:scale-110">
+                    <span class="text-white">Forever</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Interactive love meter -->
+        <div class="mt-12 p-6 bg-white rounded-xl shadow-lg text-center animate__animated animate__fadeIn animate__delay-4s">
+            <h3 class="dancing-font text-2xl text-pink-600 mb-4">How Much Do I Love You?</h3>
+            <div class="w-full bg-pink-100 rounded-full h-6 mb-4">
+                <div id="love-meter" class="bg-gradient-to-r from-pink-400 to-red-500 h-6 rounded-full animate-[width] duration-2000" style="width: 0%"></div>
+            </div>
+            <button id="measure-love" class="px-6 py-2 bg-pink-600 text-white rounded-full hover:bg-pink-700 transition-all duration-300">
+                Measure My Love
+            </button>
+            <p id="love-result" class="mt-4 text-pink-700 font-medium hidden">Infinite! My love for you has no limits ❤</p>
+        </div>
+
+        <!-- Final message -->
+        <footer class="mt-16 mb-8 text-center animate__animated animate__fadeIn animate__delay-5s">
+            <p class="dancing-font text-3xl text-pink-600 mb-4">Forever Yours</p>
+            <p class="text-gray-600">With all my heart,</p>
+            <p class="text-xl font-semibold text-pink-700 mt-1">Salim</p>
+            <div class="mt-6 flex justify-center space-x-4">
+                <button id="kiss-btn" class="px-4 py-2 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-all transform hover:scale-110">
+                    Kiss Me
+                </button>
+                <button id="hug-btn" class="px-4 py-2 bg-white text-pink-500 border border-pink-500 rounded-full hover:bg-pink-50 transition-all transform hover:scale-110">
+                    Hug Me
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Kiss animation container (hidden by default) -->
+    <div id="kiss-container" class="kiss-animation hidden">
+        <div class="lip-print">💋</div>
+        <div class="absolute bottom-1/4 dancing-font text-3xl text-pink-700 animate__animated animate__fadeInUp">
+            Mwah! I love your kisses!
+        </div>
+    </div>
+
+    <!-- Hug animation container (hidden by default) -->
+    <div id="hug-container" class="hug-animation hidden">
+        <div class="hug-message dancing-font">Wrapping you in the warmest hug!</div>
+        <div class="hearts-container">
+            <div class="heart-emoji" style="animation-delay: 0.1s;">❤️</div>
+            <div class="heart-emoji" style="animation-delay: 0.3s;">🧡</div>
+            <div class="heart-emoji" style="animation-delay: 0.5s;">💛</div>
+            <div class="heart-emoji" style="animation-delay: 0.7s;">💚</div>
+            <div class="heart-emoji" style="animation-delay: 0.9s;">💙</div>
+            <div class="heart-emoji" style="animation-delay: 1.1s;">💜</div>
+        </div>
+        <div class="mt-8 dancing-font text-xl text-pink-600 animate__animated animate__fadeIn animate__delay-1s">
+            I never want to let go...
+        </div>
+    </div>
+
+    <script>
+        // Animate love meter on button click
+        document.getElementById('measure-love').addEventListener('click', function() {
+            const meter = document.getElementById('love-meter');
+            const result = document.getElementById('love-result');
+            
+            // Reset animation
+            meter.style.width = '0%';
+            result.classList.add('hidden');
+            
+            // Animate the meter
+            setTimeout(() => {
+                meter.style.width = '100%';
+                setTimeout(() => {
+                    result.classList.remove('hidden');
+                }, 2000);
+            }, 100);
+        });
+
+        // Add floating animation to all message boxes when hovered
+        const messageBoxes = document.querySelectorAll('.message-box');
+        messageBoxes.forEach(box => {
+            box.addEventListener('mouseenter', () => {
+                box.classList.add('animate__animated', 'animate__pulse');
+            });
+            box.addEventListener('animationend', () => {
+                box.classList.remove('animate__animated', 'animate__pulse');
+            });
+        });
+
+        // Kiss button functionality
+        document.getElementById('kiss-btn').addEventListener('click', function() {
+            const kissContainer = document.getElementById('kiss-container');
+            kissContainer.classList.remove('hidden');
+            
+            // Reset animation by briefly removing and adding the class
+            setTimeout(() => {
+                kissContainer.classList.add('hidden');
+                setTimeout(() => {
+                    kissContainer.classList.remove('hidden');
+                }, 10);
+            }, 3500); // Match this with animation duration
+        });
+
+        // Hug button functionality
+        document.getElementById('hug-btn').addEventListener('click', function() {
+            const hugContainer = document.getElementById('hug-container');
+            hugContainer.classList.remove('hidden');
+            
+            // Reset animation by briefly removing and adding the class
+            setTimeout(() => {
+                hugContainer.classList.add('hidden');
+                setTimeout(() => {
+                    hugContainer.classList.remove('hidden');
+                }, 10);
+            }, 3500); // Match this with animation duration
+        });
+    </script>
+</body>
+</html>
